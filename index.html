@@ -383,6 +383,16 @@ footer a {
     opacity: 1;
     transform: translateY(0);
 }
+    .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 
 </head>
@@ -444,8 +454,38 @@ View Resume
 <h2 id="about">About Me</h2>
 
 <p>
-I am a student interested in technology, web development and learning new skills.
+I am Rakesh, a student interested in web development,
+technology and creating modern websites.
+
 </p>
+
+</div>
+    <div id="skills">
+
+<h2>Skills</h2>
+
+<p>HTML</p>
+<p>CSS</p>
+<p>JavaScript</p>
+
+</div>
+    <div id="education">
+
+<h2>Education</h2>
+
+<p>
+12th Grade Student<br>
+Higher Secondary Education
+</p>
+
+</div>
+    <div id="projects">
+
+<h2>Projects</h2>
+
+<p>Portfolio Website</p>
+<p>Web Design Projects</p>
+<p>Mini JavaScript Projects</p>
 
 </div>
 
@@ -763,6 +803,22 @@ function topFunction() {
 
 
 window.addEventListener("scroll", function(){
+
+    let reveals = document.querySelectorAll(".reveal");
+
+    for(let i = 0; i < reveals.length; i++){
+
+        let windowHeight = window.innerHeight;
+        let revealTop = reveals[i].getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 100){
+            reveals[i].classList.add("active");
+        }
+
+    }
+
+});
+    window.addEventListener("scroll", function(){
 
     let reveals = document.querySelectorAll(".reveal");
 
