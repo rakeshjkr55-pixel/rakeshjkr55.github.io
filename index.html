@@ -73,7 +73,7 @@ a {
 <img src="AI.jpg" width="200" class="profile-img">
 
 <h1>Hi, I'm Rakesh 👋</h1>
-<h3>Web Developer | Student | Tech Enthusiast</h3>
+<h3 id="typing">Web Developer | Student | Tech Enthusiast</h3>
 
 <p>Student | Future Developer | Learning Web Design</p>
     <a class="button" href="#contact">
@@ -94,19 +94,26 @@ I am a student interested in technology, web development and learning new skills
 <p>
 💻 Web Development<br>
 🌐 HTML & CSS<br>
-🐍 Programming Basics
+🐍 Programming Basics<br>
+📱 Responsive Design<br>
+🚀 Learning New Technologies
 </p>
 </div>
 
 
 <div>
 <h2 id="projects">My Projects</h2>
+
 <p>
 🚀 Personal Portfolio Website<br>
 Created using HTML and GitHub Pages.
 </p>
-</div>
 
+<a class="button" href="https://github.com/rakeshjkr55" target="_blank">
+View Project
+</a>
+
+</div>
 
 <div>
 <h2 id="contact">Contact Me</h2>
@@ -125,6 +132,23 @@ rakeshjkr55
     <p>© 2026 Rakesh | Built with HTML & CSS</p>
 </footer>
 
+<script>
+let text = "Web Developer | Student | Tech Enthusiast";
+let i = 0;
 
+function typing() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 100);
+    }
+}
+
+document.getElementById("typing").innerHTML = "";
+typing();
+</script>
+    <button onclick="topFunction()" id="topBtn">
+↑ Top
+</button>
 </body>
 </html>
