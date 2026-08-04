@@ -260,6 +260,38 @@ width:95%;
     width:60%;
 
 }
+    .dark-mode {
+
+    background:#121212;
+    color:white;
+
+}
+
+
+.dark-mode div {
+
+    background:#1e1e1e;
+
+}
+
+
+.dark-mode nav a {
+
+    color:white;
+
+}
+
+
+#darkBtn {
+
+    padding:10px 20px;
+    border-radius:20px;
+    background:black;
+    color:white;
+    border:none;
+    cursor:pointer;
+
+}
 </style>
 
 </head>
@@ -287,6 +319,9 @@ Loading...
 
 
 </nav>
+    <button onclick="darkMode()" id="darkBtn">
+🌙 Dark Mode
+</button>
 <img src="AI.jpg" class="profile-img">
 
 
@@ -551,7 +586,15 @@ document.getElementById("loader").style.display="none";
 
 </script>
 
+<script>
 
+function darkMode(){
+
+    document.body.classList.toggle("dark-mode");
+
+}
+
+</script>
 
 </body>
 
