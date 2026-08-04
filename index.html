@@ -12,14 +12,17 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #f5f5f5, #dbeafe);
     color: #222;
     padding: 40px;
 }
 
-img {
+.profile-img {
     border-radius: 50%;
     border: 5px solid black;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 h1 {
@@ -46,6 +49,11 @@ a {
     border-radius: 25px;
     text-decoration: none;
 }
+    footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 14px;
+}
 
 </style>
 
@@ -62,7 +70,7 @@ a {
 </nav>
 
 
-<img src="AI.jpg" width="200">
+<img src="AI.jpg" width="200" class="profile-img">
 
 <h1>Hi, I'm Rakesh 👋</h1>
 <h3>Web Developer | Student | Tech Enthusiast</h3>
@@ -114,7 +122,7 @@ rakeshjkr55
 
 
 <footer>
-<p>© 2026 Rakesh. All Rights Reserved.</p>
+    <p>© 2026 Rakesh | Built with HTML & CSS</p>
 </footer>
 
 
