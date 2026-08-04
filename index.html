@@ -6,14 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Rakesh | Portfolio</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
-<body onload="loader()">
-    <div id="loader">
-Loading...
-</div>
-{
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
     font-family: Arial, sans-serif;
     text-align: center;
     background: linear-gradient(135deg, #f5f5f5, #dbeafe);
@@ -21,155 +24,262 @@ Loading...
     padding: 40px;
 }
 
-.profile-img {
-    border-radius: 50%;
-    border: 5px solid black;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
 
-h1 {
-    font-size: 45px;
-}
+/* Loader */
 
-div {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    border-radius: 15px;
-    transition: 0.3s;
-}
+#loader {
 
-div:hover {
-    transform: translateY(-5px);
-}
-a {
-    color: blue;
-}
-    .button {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 20px;
-    background: black;
-    color: white;
-    border-radius: 25px;
-    text-decoration: none;
-}
-    footer {
-    margin-top: 40px;
-    padding: 20px;
-    font-size: 14px;
-}
-#topBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background: black;
-    color: white;
-    border: none;
-    border-radius: 20px;
-}
-    .intro {
-    margin: 20px auto;
-}
-    nav a {
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-    .title {
-    animation: fadeIn 2s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-    @media (max-width: 600px) {
-
-    body {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 35px;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px;
-    }
-
-    .profile-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    div {
-        width: 90%;
-    }
-
-}
-    #loader {
     position: fixed;
     width: 100%;
     height: 100%;
     background: white;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    z-index:999;
 }
+
+
+/* Navigation */
+
+nav {
+
+    margin-bottom:30px;
+
+}
+
+
+nav a {
+
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+
+}
+
+
+/* Profile */
+
+.profile-img {
+
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border:5px solid black;
+    object-fit:cover;
+
+}
+
+
+/* Cards */
+
+
+div {
+
+    background:white;
+    padding:25px;
+    margin:20px auto;
+    max-width:700px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
+
+}
+
+
+div:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+/* Title animation */
+
+
+.title {
+
+    animation:fadeIn 2s;
+
+}
+
+
+@keyframes fadeIn {
+
+from {
+
+opacity:0;
+transform:translateY(-20px);
+
+}
+
+
+to {
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+/* Buttons */
+
+
+.button {
+
+display:inline-block;
+padding:12px 25px;
+margin:10px;
+background:black;
+color:white;
+border-radius:25px;
+text-decoration:none;
+
+}
+
+
+
+.button:hover {
+
+opacity:0.8;
+
+}
+
+
+/* Top button */
+
+#topBtn {
+
+position:fixed;
+bottom:20px;
+right:20px;
+padding:10px 15px;
+background:black;
+color:white;
+border:none;
+border-radius:20px;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+body{
+
+padding:15px;
+
+}
+
+
+h1{
+
+font-size:35px;
+
+}
+
+
+.profile-img{
+
+width:150px;
+height:150px;
+
+}
+
+
+nav a{
+
+display:block;
+margin:15px;
+
+}
+
+
+div{
+
+width:95%;
+
+}
+
+
+}
+
+
 </style>
 
 </head>
 
 
-<body>
+<body onload="loader()">
+
+
+<div id="loader">
+
+Loading...
+
+</div>
+
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#skills">Skills</a>
-    <a href="#tools">Tools</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+
+<a href="#about">About</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#contact">Contact</a>
+
+
 </nav>
-
-
-<img src="AI.jpg" width="200" class="profile-img">
-<div class="intro">
-<h1 class="title">Hi, I'm Rakesh 👋</h1>
-<h3 id="typing">Web Developer | Student | Tech Enthusiast</h3>
-
-<p>Student | Future Developer | Learning Web Design</p>
-    </div>
-    <a class="button" href="#contact">
-    Contact Me
-        <a class="button" href="resume.html" target="_blank">
-    View Resume
-</a>
-</a>
+<img src="AI.jpg" class="profile-img">
 
 
 <div>
-<h2 id="about">About Me</h2>
-    <div>
 
-<h2 id="services">What I Do</h2>
+<h1 class="title">Hi, I'm Rakesh 👋</h1>
+
+<h3 id="typing"></h3>
+
+<p>
+Student | Future Developer | Learning Web Design
+</p>
+
+<a class="button" href="#contact">
+Contact Me
+</a>
+
+<a class="button" href="resume.html" target="_blank">
+View Resume
+</a>
+
+</div>
+
+
+
+<div>
+
+<h2 id="about">About Me</h2>
+
+<p>
+I am a student interested in technology, web development and learning new skills.
+</p>
+
+</div>
+
+
+
+<div>
+
+<h2>What I Do</h2>
 
 <p>
 💻 Build Websites<br>
@@ -179,124 +289,205 @@ a {
 </p>
 
 </div>
-<p>
-I am a student interested in technology, web development and learning new skills.
-</p>
-</div>
+
 
 
 <div>
+
 <h2 id="skills">My Skills</h2>
+
 <p>
+
 💻 Web Development<br>
 🌐 HTML & CSS<br>
 🐍 Programming Basics<br>
 📱 Responsive Design<br>
 🚀 Learning New Technologies
+
 </p>
+
 </div>
+
+
 
 <div>
-<h2 id="certificates">Certificates</h2>
-
-<p>
-🏆 Add your certificates here<br>
-📚 Online Courses<br>
-💻 Coding Certificates
-</p>
-
-</div>
-    <div>
 
 <h2 id="tools">Tools I Use</h2>
 
 <p>
+
 🖥️ VS Code<br>
 🌐 GitHub<br>
 🎨 Canva<br>
 🚀 Git & GitHub Pages
+
 </p>
 
 </div>
+
+
+
 <div>
+
 <h2 id="projects">My Projects</h2>
 
 <p>
+
 🚀 Personal Portfolio Website<br>
-Created using HTML and GitHub Pages.
+
+Created using HTML and CSS.
+
 </p>
 
-<a class="button" href="https://github.com/rakeshjkr55" target="_blank">
+
+<a class="button" 
+href="https://github.com/rakeshjkr55" 
+target="_blank">
+
 View Project
+
 </a>
+
 
 </div>
 
+
+
 <div>
+
 <h2 id="contact">Contact Me</h2>
-    <p>
-Instagram:
-<a href="https://www.instagram.com/x._.rxkxzz._.x?utm_source=qr&igsh=Z25wZGtpd3pob3I0" target="_blank">
-Follow Me
-</a>
-</p>
+
 
 <p>
-LinkedIn:
-<a href="YOUR_LINKEDIN_LINK" target="_blank">
-Connect
+
+Instagram:
+
+<a href="https://www.instagram.com/x._.rxkxzz._.x" target="_blank">
+
+Follow Me
+
 </a>
+
 </p>
-    <p>
+
+
+<p>
+
+GitHub:
+
+<a href="https://github.com/rakeshjkr55" target="_blank">
+
+rakeshjkr55
+
+</a>
+
+</p>
+
+
+<p>
+
+Email:
+
+<a href="mailto:rakeshjkr55@gmail.com">
+
+Send Mail
+
+</a>
+
+</p>
+
+
+<p>
 Let's connect and build something amazing 🚀
 </p>
 
-<p>
-GitHub:
-<a href="https://github.com/rakeshjkr55">
-rakeshjkr55
-</a>
-</p>
 
 </div>
 
 
+
 <footer>
-    <p>© 2026 Rakesh | Built with HTML & CSS</p>
+
+<p>
+© 2026 Rakesh | Built with HTML & CSS
+</p>
+
 </footer>
 
+
+
+<button onclick="topFunction()" id="topBtn">
+
+↑ Top
+
+</button>
+
+
+
 <script>
+
+
+// Typing Animation
+
 let text = "Web Developer | Student | Tech Enthusiast";
+
 let i = 0;
 
-function typing() {
-    if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 100);
-    }
+
+function typing(){
+
+if(i < text.length){
+
+document.getElementById("typing").innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typing,100);
+
 }
 
-document.getElementById("typing").innerHTML = "";
+}
+
+
 typing();
-</script>
-    <button onclick="topFunction()" id="topBtn">
-↑ Top
-</button>
-    <script>
-function topFunction() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+
+
+
+
+// Top Button
+
+function topFunction(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
 }
-</script>
-    <script>
+
+
+
+
+// Loader
+
 function loader(){
-    setTimeout(function(){
-        document.getElementById("loader").style.display="none";
-    },1000);
+
+setTimeout(function(){
+
+document.getElementById("loader").style.display="none";
+
+},1000);
+
 }
+
+
 </script>
+
+
+
 </body>
+
 </html>
