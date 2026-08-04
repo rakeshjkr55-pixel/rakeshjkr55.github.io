@@ -35,8 +35,12 @@ div {
     margin: 20px auto;
     max-width: 600px;
     border-radius: 15px;
+    transition: 0.3s;
 }
 
+div:hover {
+    transform: translateY(-5px);
+}
 a {
     color: blue;
 }
@@ -54,7 +58,16 @@ a {
     padding: 20px;
     font-size: 14px;
 }
-
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
 </style>
 
 </head>
@@ -71,11 +84,12 @@ a {
 
 
 <img src="AI.jpg" width="200" class="profile-img">
-
+<div class="intro">
 <h1>Hi, I'm Rakesh 👋</h1>
 <h3 id="typing">Web Developer | Student | Tech Enthusiast</h3>
 
 <p>Student | Future Developer | Learning Web Design</p>
+    </div>
     <a class="button" href="#contact">
     Contact Me
 </a>
@@ -150,5 +164,13 @@ typing();
     <button onclick="topFunction()" id="topBtn">
 ↑ Top
 </button>
+    <script>
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+</script>
 </body>
 </html>
