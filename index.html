@@ -76,6 +76,46 @@ a {
     text-decoration: none;
     font-weight: bold;
 }
+    .title {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    @media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    div {
+        width: 90%;
+    }
+
+}
 </style>
 
 </head>
@@ -88,12 +128,15 @@ a {
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#tools">Tools</a>
+    <a href="#services">Services</a>
 </nav>
 
 
 <img src="AI.jpg" width="200" class="profile-img">
 <div class="intro">
-<h1>Hi, I'm Rakesh 👋</h1>
+<h1 class="title">Hi, I'm Rakesh 👋</h1>
 <h3 id="typing">Web Developer | Student | Tech Enthusiast</h3>
 
 <p>Student | Future Developer | Learning Web Design</p>
@@ -105,6 +148,18 @@ a {
 
 <div>
 <h2 id="about">About Me</h2>
+    <div>
+
+<h2 id="services">What I Do</h2>
+
+<p>
+💻 Build Websites<br>
+🎨 Design Web Pages<br>
+⚡ Learn New Technologies<br>
+🚀 Create Personal Projects
+</p>
+
+</div>
 <p>
 I am a student interested in technology, web development and learning new skills.
 </p>
@@ -122,7 +177,28 @@ I am a student interested in technology, web development and learning new skills
 </p>
 </div>
 
+<div>
+<h2 id="certificates">Certificates</h2>
 
+<p>
+🏆 Add your certificates here<br>
+📚 Online Courses<br>
+💻 Coding Certificates
+</p>
+
+</div>
+    <div>
+
+<h2 id="tools">Tools I Use</h2>
+
+<p>
+🖥️ VS Code<br>
+🌐 GitHub<br>
+🎨 Canva<br>
+🚀 Git & GitHub Pages
+</p>
+
+</div>
 <div>
 <h2 id="projects">My Projects</h2>
 
@@ -139,10 +215,26 @@ View Project
 
 <div>
 <h2 id="contact">Contact Me</h2>
+    <p>
+Instagram:
+<a href="https://www.instagram.com/x._.rxkxzz._.x?utm_source=qr&igsh=Z25wZGtpd3pob3I0" target="_blank">
+Follow Me
+</a>
+</p>
+
+<p>
+LinkedIn:
+<a href="YOUR_LINKEDIN_LINK" target="_blank">
+Connect
+</a>
+</p>
+    <p>
+Let's connect and build something amazing 🚀
+</p>
 
 <p>
 GitHub:
-<a href="https://www.instagram.com/x._.rxkxzz._.x?utm_source=qr&igsh=Z25wZGtpd3pob3I0">
+<a href="https://github.com/rakeshjkr55">
 rakeshjkr55
 </a>
 </p>
