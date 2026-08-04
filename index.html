@@ -363,6 +363,26 @@ footer a {
     scroll-behavior: smooth;
 
 }
+    #typing::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+    .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 
 </head>
@@ -398,8 +418,9 @@ Loading...
 
 <div>
 
-<h1 class="title">Hi, I'm Rakesh 👋</h1>
-
+<h1 class="title">
+    Hi, I'm <span id="typing"></span>
+</h1>
 <h3 id="typing"></h3>
 
 <p>
@@ -728,9 +749,22 @@ function darkMode(){
     }
 
 }
+<script>
+
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+// Paste Step 42.2 code here
+
 
 </script>
-
+</script>
+   
 </body>
 
 </html>
