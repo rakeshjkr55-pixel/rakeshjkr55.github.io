@@ -8,13 +8,16 @@
 body {
     font-family: Arial;
     padding: 40px;
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
 }
 
-div {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
+body {
+    font-family: Arial;
+    padding: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+}
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     animation: slide 1s ease;
 }
@@ -98,6 +101,24 @@ nav a {
 nav a:hover {
     opacity: 0.7;
 }
+    .social {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social a {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.social a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
 </style>
 
 </head>
@@ -154,17 +175,21 @@ Canva
 
 <h2 id="contact">Contact</h2>
 
-<p>
-GitHub: rakeshjkr55
-</p>
+<div class="social">
 
-<p>
-Instagram: x._.rxkxzz._.x
-</p>
+<a href="https://github.com/rakeshjkr55" target="_blank">
+GitHub
+</a>
 
-<p>
-Email: rakeshjkr55@gmail.com
-</p>
+<a href="https://instagram.com/x._.rxkxzz._.x" target="_blank">
+Instagram
+</a>
+
+<a href="mailto:rakeshjkr55@gmail.com">
+Email
+</a>
+
+</div>
 
 </div>
 <footer>
